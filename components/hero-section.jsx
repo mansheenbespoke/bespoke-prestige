@@ -1,9 +1,8 @@
 import { Phone, CheckCircle2, ArrowRight, Star, Shield, Clock } from "lucide-react"
-import { Button } from "@/components/css/button"
+import { Button } from "./css/button"
 
 const highlights = [
   { icon: Shield, text: "Fully Qualified Mechanics" },
-  { icon: Star, text: "5-Star Google Rating" },
   { icon: Clock, text: "Same Day Service Available" },
 ]
 
@@ -47,7 +46,7 @@ export function HeroSection() {
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-6 text-balance">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] mb-6 text-balance">
               <span className="text-foreground">Expert Car</span>
               <br />
               <span className="text-primary">Service &</span>
@@ -56,7 +55,7 @@ export function HeroSection() {
             </h1>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-xl">
+            <p className="text-md md:text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
               Melbourne&apos;s trusted mechanics delivering reliable, quality-assured vehicle services 
               with <span className="text-foreground font-semibold">over 20 years of experience</span>.
             </p>

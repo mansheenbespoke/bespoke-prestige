@@ -12,8 +12,8 @@ function App() {
   return (
     <main className="min-h-screen bg-background">
       <Header />
-      {/* <HeroSection />
-      <ServicesSection />
+      <HeroSection />
+      {/* <ServicesSection />
       <AboutSection />
       <WhyUsSection />
       <RWCSection />
