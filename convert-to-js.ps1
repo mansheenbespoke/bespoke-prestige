@@ -42,7 +42,7 @@ function Convert-TsToJs {
     $content | Set-Content -Path $outputPath -NoNewline
 }
 
-# Convert all .tsx files in components/ui
+# Convert all .tsx files in components/css
 Get-ChildItem -Path "$rootPath\components\ui" -Filter "*.tsx" | ForEach-Object {
     $jsxPath = $_.FullName -replace '\.tsx$', '.jsx'
     Write-Host "Converting $($_.Name) to $($_.BaseName).jsx"

@@ -7,7 +7,7 @@ import {
   Clock,
   ArrowRight
 } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/css/card"
 
 const services = [
   {

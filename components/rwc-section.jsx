@@ -1,6 +1,6 @@
 import { CheckCircle2, AlertCircle, ArrowRight, FileCheck } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/css/button"
+import { Card, CardContent } from "@/components/css/card"
 
 const inspectionStages = [
   "Inside vehicle checks",

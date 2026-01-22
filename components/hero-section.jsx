@@ -1,5 +1,5 @@
 import { Phone, CheckCircle2, ArrowRight, Star, Shield, Clock } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/css/button"
 
 const highlights = [
   { icon: Shield, text: "Fully Qualified Mechanics" },
