@@ -13,7 +13,7 @@ const services = [
   {
     icon: Settings,
     title: "General Service & Maintenance",
-    description: "Comprehensive vehicle servicing by fully qualified mechanics with over 20 years of combined experience. Quality is never compromised.",
+    description: "Bespoke Prestige can cater for all your general service and maintenance requirements. All our Mechanics are fully qualified and have over 20 years of experience combined and are dedicated to providing you with efficient and reliable service.",
     href: "#contact",
   },
   {
@@ -25,10 +25,16 @@ const services = [
   },
   {
     icon: Search,
-    title: "RACV Pre-Purchase Inspection",
+    title: "RACV Pre-Purchase Vehicle Inspection",
     description: "Don't let hidden problems ruin your dream car. Get expert insight with a comprehensive check and detailed report before you buy.",
+    href: "#racv",
+    price: "$385",
+  },
+  {
+    icon: Clock,
+    title: "After Hours Drop-Off",
+    description: "Open Monday to Friday with emergency after-hours drop-off available. We're here when something goes wrong.",
     href: "#contact",
-    price: "$440",
   },
   {
     icon: Wrench,
@@ -42,12 +48,7 @@ const services = [
     description: "Our fully qualified mechanics are dedicated to providing efficient, reliable service. Real solutions for real problems.",
     href: "#about",
   },
-  {
-    icon: Clock,
-    title: "After Hours Drop-Off",
-    description: "Open Monday to Friday with emergency after-hours drop-off available. We're here when something goes wrong.",
-    href: "#contact",
-  },
+  
 ]
 
 export function ServicesSection() {
@@ -56,13 +57,13 @@ export function ServicesSection() {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-sm font-medium text-primary tracking-wider uppercase mb-4 block">
+          <span className="text-med font-medium text-primary tracking-wider uppercase mb-4 block">
             Our Services
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-balance">
-            Comprehensive Car Care
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-balance">
+            Quality Repairs, Trusted Mechanics
             <br />
-            <span className="text-primary">You Can Trust</span>
+            <span className="text-primary">And Real Solutions</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
             From routine maintenance to roadworthy certificates, we provide premium 

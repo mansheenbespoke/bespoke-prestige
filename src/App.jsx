@@ -1,7 +1,7 @@
 import { Header } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { ServicesSection } from "@/components/services-section"
-import { AboutSection } from "@/components/about-section"
+import { RacvSection } from "@/components/racv-section"
 import { WhyUsSection } from "@/components/why-us-section"
 import { RWCSection } from "@/components/rwc-section"
 import { FAQSection } from "@/components/faq-section"
@@ -13,9 +13,9 @@ function App() {
     <main className="min-h-screen bg-background">
       <Header />
       <HeroSection />
-      {/* <ServicesSection />
-      <AboutSection />
-      <WhyUsSection />
+      <ServicesSection />
+      <RacvSection />
+      {/* <WhyUsSection />
       <RWCSection />
       <FAQSection />
       <ContactSection />

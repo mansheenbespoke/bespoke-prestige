@@ -10,11 +10,8 @@ const marqueeServices = [
   "Roadworthy Certificates (RWC)",
   "RACV Pre-Purchase Inspections",
   "General Servicing",
-  "Brake & Suspension",
-  "Electrical Diagnostics",
-  "Air Conditioning",
-  "Engine Repairs",
-  "Transmission Service",
+  "Compliance Vehicle Certifications",
+  "VASS Certification Services",
 ]
 
 export function HeroSection() {
@@ -46,7 +43,7 @@ export function HeroSection() {
             </div>
 
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] mb-6 text-balance">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-[1.1] mb-6 text-balance">
               <span className="text-foreground">Expert Car</span>
               <br />
               <span className="text-primary">Service &</span>
@@ -107,7 +104,7 @@ export function HeroSection() {
               {/* Main Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=2074&auto=format&fit=crop"
+                  src="/bespoke.png"
                   alt="Professional mechanic working on car engine"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
