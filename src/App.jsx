@@ -1,4 +1,4 @@
-import { Header } from "@/components/header"
+import { Header } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { ServicesSection } from "@/components/services-section"
 import { AboutSection } from "@/components/about-section"
@@ -12,14 +12,14 @@ function App() {
   return (
     <main className="min-h-screen bg-background">
       <Header />
-      <HeroSection />
+      {/* <HeroSection />
       <ServicesSection />
       <AboutSection />
       <WhyUsSection />
       <RWCSection />
       <FAQSection />
       <ContactSection />
-      <Footer />
+      <Footer /> */}
     </main>
   )
 }

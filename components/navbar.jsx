@@ -3,31 +3,24 @@ import { Phone, Menu, X } from "lucide-react"
 import { Button } from "@/components/css/button"
 
 const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#about", label: "About" },
-  { href: "#why-us", label: "Why Us" },
+  { href: "#repairs", label: "Repairs" },
   { href: "#rwc", label: "RWC" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "#racv", label: "RACV" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#compliance", label: "Compliance" },
+  { href: "#vass", label: "VASS" },
 ]
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="/" className="flex items-center gap-3">
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-foreground">
-                BESPOKE
-              </span>
-              <span className="text-xs tracking-[0.3em] text-primary font-medium -mt-1">
-                PRESTIGE
-              </span>
-            </div>
+            <img src="/bespoke-prestige-logo.png" alt="Bespoke Prestige" className="h-12 w-auto invert" />
           </a>
 
           {/* Desktop Navigation */}

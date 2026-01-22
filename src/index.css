@@ -15,8 +15,8 @@
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 98%;
     
-    /* Primary - Crimson Red (like original) */
-    --primary: 348 83% 47%;
+    /* Primary - Bright Green */
+    --primary: 103 100% 39.2%;
     --primary-foreground: 0 0% 100%;
     
     /* Secondary - Dark gray */
@@ -27,16 +27,16 @@
     --muted: 0 0% 24%;
     --muted-foreground: 0 0% 64%;
     
-    /* Accent - Crimson Red */
-    --accent: 348 83% 47%;
+    /* Accent - Bright Green */
+    --accent: 103 100% 39.2%;
     --accent-foreground: 0 0% 100%;
     
-    --destructive: 348 83% 47%;
+    --destructive: 103 100% 39.2%;
     --destructive-foreground: 0 0% 100%;
     
     --border: 0 0% 20%;
     --input: 0 0% 14%;
-    --ring: 348 83% 47%;
+    --ring: 103 100% 39.2%;
     
     --radius: 0.5rem;
   }
