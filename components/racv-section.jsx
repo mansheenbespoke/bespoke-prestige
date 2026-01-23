@@ -1,4 +1,6 @@
 import { CheckCircle2 } from "lucide-react"
+import { Button } from "@/components/css/button"
+import { Card, CardContent } from "@/components/css/card"
 
 const features = [
   "Expert Insight: Comprehensive checks by experienced professionals",
@@ -8,7 +10,7 @@ const features = [
 
 export function RacvSection() {
   return (
-    <section id="about" className="py-24 bg-secondary/30">
+    <section id="racv" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image Side */}
@@ -60,20 +62,25 @@ export function RacvSection() {
               ))}
             </div>
 
-            {/* Call to Action */}
-            <div className="relative bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 border border-primary/30 rounded-2xl p-8 overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
-              <div className="relative">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-1 h-8 bg-primary rounded-full" />
-                  <span className="text-sm font-semibold text-primary tracking-wide uppercase">Peace of Mind</span>
-                </div>
-                <p className="text-foreground leading-relaxed text-base">
-                  Act now and make your investment worry-free. Our trusted service guarantees 
-                  you peace of mind and value for every dollar spent.
+            {/* RACV Pricing Box */}
+            <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20 mt-6">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-foreground mb-2">RACV Pricing</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Act now and make your investment worry-free. Our trusted service guarantees you peace of mind and value for every dollar spent.
                 </p>
-              </div>
-            </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-primary">$385</span>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
+                  >
+                    <a href="#contact">Book Now</a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

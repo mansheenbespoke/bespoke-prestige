@@ -15,9 +15,9 @@ function App() {
       <HeroSection />
       <ServicesSection />
       <RacvSection />
-      {/* <WhyUsSection />
+      {/* <WhyUsSection /> */}
       <RWCSection />
-      <FAQSection />
+      {/* <FAQSection />
       <ContactSection />
       <Footer /> */}
     </main>

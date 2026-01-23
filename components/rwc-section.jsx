@@ -1,4 +1,4 @@
-import { CheckCircle2, AlertCircle, ArrowRight, FileCheck } from "lucide-react"
+import { CheckCircle2, AlertCircle, ArrowRight, FileCheck, ClipboardCheck } from "lucide-react"
 import { Button } from "@/components/css/button"
 import { Card, CardContent } from "@/components/css/card"
 
@@ -35,15 +35,14 @@ export function RWCSection() {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-sm font-medium text-primary tracking-wider uppercase mb-4 block">
-            Roadworthy Certificate
+          <span className="text-md font-medium text-primary tracking-wider uppercase mb-4 block">
+            we offer
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            VIC Roads <span className="text-primary">Approved Tester</span>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
+            Roadworthy Certificate (RWC)
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-            A Certificate of Roadworthiness certifies that your vehicle has been inspected 
-            and meets the roadworthiness requirements as set out by VIC Roads.
+            In Victoria, Roadworthy Certificates (RWCs) are required for registration of a vehicle at VicRoads or the transfer of vehicle registration between two individuals.
           </p>
         </div>
 
@@ -58,48 +57,79 @@ export function RWCSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">When is a RWC Required?</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      In Victoria, a Roadworthy Certificate is required when a vehicle is 
-                      transferred from one owner to another, or if a vehicle is unregistered 
-                      or has its registration cancelled by VIC Roads.
-                    </p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mt-2">The purpose of a RWC is to ensure safety standards of all vehicles on Victorian roads. A Certificate of Roadworthiness is an official document issued by a licensed vehicle tester confirming that a vehicle has been inspected and complies with the roadworthiness standards prescribed by VicRoads at the time of inspection. The certificate verifies that the vehicle meets the required safety criteria and is considered suitable for legal use on public roads.</p>
                   </div>
                 </div>
 
-                <h4 className="font-semibold text-foreground mb-4">How is a RWC Conducted?</h4>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Your vehicle will go through an inspection by an approved tester using 
-                  VIC Roads guidelines:
-                </p>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {inspectionStages.map((stage, index) => (
-                    <div key={stage} className="flex items-center gap-3">
-                      <span className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-xs font-semibold text-primary">
-                        {index + 1}
-                      </span>
-                      <span className="text-sm text-foreground">{stage}</span>
-                    </div>
-                  ))}
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FileCheck className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">What is the Roadworthy Certificate Process?</h4>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      When presented, your vehicle will go through an inspection by a Licenced Vehicle Tester as per VicRoads guidelines. The Roadworthy procedure includes inspection of:
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      <li className="flex items-start gap-2 text-sm text-foreground">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Drive test</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-sm text-foreground">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Exterior of vehicle</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-sm text-foreground">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Interior of vehicle</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-sm text-foreground">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Mechanical inspection (engine bay and underbody)</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-sm text-foreground">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Wheels and brakes</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-sm text-foreground">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Lamps, Signals and Electronics</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
-
-            {/* What happens after inspection */}
-            <Card className="bg-card border-border">
-              <CardContent className="p-6">
-                <h4 className="font-semibold text-foreground mb-4">After Inspection</h4>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <ClipboardCheck className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">After Inspection</h4>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      At the conclusion of the Roadworthy inspection, the possible outcomes are as follows:
+                    </p>
+                    <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-muted-foreground">
-                      <strong className="text-foreground">Pass:</strong> Certificate emailed to presenter with hard copy available on request.
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">The vehicle passes</p>
+                      <p className="text-sm text-muted-foreground">
+                        A Roadworthy Certificate will be emailed to the presenter; hard copy can be supplied on request.
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
                     <AlertCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-muted-foreground">
-                      <strong className="text-foreground">Fail:</strong> List of items that need to be fixed within 7 days for reinspection.
-                    </p>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">The vehicle fails</p>
+                      <p className="text-sm text-muted-foreground mb-2">
+                        If a vehicle fails the inspection, a list of items that did not meet VicRoads roadworthy standards will be presented. These items are required to be fixed within 7 days.
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        A reinspection must also be conducted within 7 days. In such cases, a discounted reinspection fee of <span className="font-semibold text-primary">$110</span> will be applied.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
                   </div>
                 </div>
               </CardContent>
@@ -122,7 +152,7 @@ export function RWCSection() {
 
                 <div className="space-y-4 mb-8">
                   {pricing.map((item) => (
-                    <div 
+                    <div
                       key={item.title}
                       className="flex items-center justify-between p-4 bg-secondary/50 rounded-lg"
                     >
@@ -130,13 +160,13 @@ export function RWCSection() {
                         <p className="font-medium text-foreground">{item.title}</p>
                         <p className="text-sm text-muted-foreground">{item.description}</p>
                       </div>
-                      <span className="text-2xl font-bold text-primary">{item.price}</span>
+                      <span className="text-xl font-bold text-primary">{item.price}</span>
                     </div>
                   ))}
                 </div>
 
-                <Button 
-                  asChild 
+                <Button
+                  asChild
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground h-12"
                 >
                   <a href="#contact" className="flex items-center gap-2">
@@ -145,30 +175,9 @@ export function RWCSection() {
                   </a>
                 </Button>
 
-                <p className="text-xs text-muted-foreground text-center mt-4">
+                <p className="text-sm text-muted-foreground text-center mt-4">
                   Or call us at <a href="tel:0398947844" className="text-primary hover:underline">03 9894 7844</a>
                 </p>
-              </CardContent>
-            </Card>
-
-            {/* RACV Box */}
-            <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20 mt-6">
-              <CardContent className="p-6">
-                <h3 className="font-semibold text-foreground mb-2">RACV Pre-Purchase Inspection</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Know Before You Buy. Drive With Confidence. Get the full picture of 
-                  a car's condition before making a commitment.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-3xl font-bold text-primary">$440</span>
-                  <Button 
-                    asChild 
-                    variant="outline" 
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
-                  >
-                    <a href="#contact">Book Now</a>
-                  </Button>
-                </div>
               </CardContent>
             </Card>
           </div>
