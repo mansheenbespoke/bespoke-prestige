@@ -20,8 +20,8 @@ function App() {
       <ComplianceSection />
       <VASSSection />
       <FAQSection />
-      {/* <ContactSection />
-      <Footer /> */}
+      {/* <ContactSection /> */}
+      <Footer />
     </main>
   )
 }

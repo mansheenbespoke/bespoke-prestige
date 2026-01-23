@@ -2,39 +2,34 @@ import { Phone, Mail, MapPin } from "lucide-react"
 
 const quickLinks = [
   { href: "#services", label: "Services" },
-  { href: "#about", label: "About Us" },
+  { href: "#racv", label: "RACV" },
   { href: "#rwc", label: "RWC" },
+  { href: "#compliance", label: "Compliance" },
+  { href: "#vass", label: "VASS" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ]
 
 const services = [
   "General Service",
-  "Roadworthy Certificate",
-  "Pre-Purchase Inspection",
-  "Quality Repairs",
-  "Vehicle Maintenance",
+  "RACV Pre-Purchase Vehicle Inspection",
+  "Roadworthy Certificate (RWC)",
+  "Compliance",
+  "Vehicle Assessment Signatory Scheme (VASS)",
 ]
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="bg-black border-t border-border">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Main Footer */}
         <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <a href="/" className="inline-block mb-6">
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold tracking-tight text-foreground">
-                  BESPOKE
-                </span>
-                <span className="text-xs tracking-[0.3em] text-primary font-medium -mt-1">
-                  PRESTIGE
-                </span>
-              </div>
+              <img src="/bespoke-prestige-logo.png" alt="Bespoke Prestige" className="h-12 w-auto invert" />
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Quality repairs, trusted mechanics, real solutions. Over 20 years of 
@@ -49,15 +44,15 @@ export function Footer() {
                 03 9894 7844
               </a>
               <a 
-                href="mailto:info@bespokeprestige.com"
+                href="mailto:email@bespokeprestige.com"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail className="w-4 h-4 text-primary" />
-                info@bespokeprestige.com
+                email@bespokeprestige.com
               </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary" />
-                Melbourne, VIC
+                26 Havelock Road, Bayswater, VIC 3153
               </div>
             </div>
           </div>
@@ -99,7 +94,7 @@ export function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Monday - Friday</span>
-                <span className="text-foreground">Open</span>
+                <span className="text-foreground">8:30am-5pm</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Saturday</span>

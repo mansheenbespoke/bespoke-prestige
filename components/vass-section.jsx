@@ -70,7 +70,7 @@ export function VASSSection() {
   const visiblePricing = showAllPricing ? pricing : pricing.slice(0, 4)
   
   return (
-    <section id="rwc" className="py-24 bg-secondary/30">
+    <section id="vass" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">

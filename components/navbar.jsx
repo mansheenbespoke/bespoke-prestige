@@ -4,11 +4,12 @@ import { Button } from "@/components/css/button"
 
 const navLinks = [
   { href: "#services", label: "Services" },
+   { href: "#racv", label: "RACV" },
   { href: "#rwc", label: "RWC" },
-  { href: "#racv", label: "RACV" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#compliance", label: "Compliance" },
-  { href: "#vass", label: "VASS" },
+ { href: "#compliance", label: "Compliance" },
+{ href: "#vass", label: "VASS" },
+  { href: "#faq", label: "FAQ" },
+  { href: "#contact", label: "Contact" },
 ]
 
 export function Header() {
