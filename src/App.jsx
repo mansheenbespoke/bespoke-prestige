@@ -4,6 +4,7 @@ import { ServicesSection } from "@/components/services-section"
 import { RacvSection } from "@/components/racv-section"
 import { ComplianceSection } from "@/components/compliance-section"
 import { RWCSection } from "@/components/rwc-section"
+import {VASSSection} from "@/components/vass-section"
 import { FAQSection } from "@/components/faq-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
@@ -17,6 +18,7 @@ function App() {
       <RacvSection />
       <RWCSection />
       <ComplianceSection />
+      <VASSSection />
       {/* <FAQSection />
       <ContactSection />
       <Footer /> */}
