@@ -7,35 +7,31 @@ import {
 
 const faqs = [
   {
-    question: "Where are you located?",
-    answer: "Bespoke Prestige Service Centre is located in Melbourne. We service all makes and models of vehicles. Contact us for our exact address and directions.",
+    question: "Where are we located?",
+    answer: "We are located at 26 Havelock Road, Bayswater, VIC 3153.",
   },
   {
-    question: "What are your hours of operation?",
-    answer: "We are open Monday to Friday during business hours. In emergencies, we can arrange after-hours drop-offs to make it convenient when something goes wrong with your vehicle.",
+    question: "What are our hours of operation?",
+    answer: "We are open Monday to Friday, 8:30 AM to 5:00 PM during business hours. In emergencies, we can arrange after-hours drop-offs to make it convenient when something goes wrong with your vehicle.",
   },
   {
-    question: "How much does it cost to fix or service my car?",
-    answer: "Pricing varies depending on the service required and your vehicle type. We pride ourselves on quality workmanship - you get what you pay for. Contact us for a quote specific to your needs.",
-  },
-  {
-    question: "Do you offer free diagnostics?",
+    question: "Do we offer free diagnostics?",
     answer: "We offer comprehensive diagnostic services to identify issues with your vehicle. While there may be a diagnostic fee, this is often waived if you proceed with the recommended repairs. Contact us for more details.",
   },
   {
     question: "How long does a Roadworthy Certificate (RWC) take?",
-    answer: "A standard RWC inspection typically takes 1-2 hours depending on the vehicle. If any issues are found, we'll provide a list of required repairs. Reinspection must be conducted within 7 days.",
+    answer: "A standard RWC inspection typically takes 2-3 hours depending on the vehicle. If any issues are found, we'll provide a list of required repairs. Reinspection must be conducted within 7 days.",
   },
   {
     question: "What's included in the RACV Pre-Purchase Inspection?",
-    answer: "Our $440 RACV Pre-Purchase Inspection includes comprehensive checks by experienced professionals, a detailed report highlighting potential issues or hidden costs, and expert insight to help you make an informed decision before purchasing a vehicle.",
+    answer: "Our $385 RACV Pre-Purchase Inspection includes comprehensive checks by experienced professionals, a detailed report highlighting potential issues or hidden costs, and expert insight to help you make an informed decision before purchasing a vehicle.",
   },
   {
-    question: "Do you work on all car brands?",
-    answer: "Yes, our fully qualified mechanics have over 20 years of combined experience working on all makes and models. Whether you drive a European luxury vehicle or an everyday sedan, we can service it.",
+    question: "Do we work on all car brands?",
+    answer: "Yes, our fully qualified mechanics have over 20 years of combined experience working on all makes and models. Whether you drive a luxury vehicle or an everyday sedan, we can service it.",
   },
   {
-    question: "What payment methods do you accept?",
+    question: "What payment methods do we accept?",
     answer: "We accept all major credit cards, debit cards, and bank transfers. Payment is due upon completion of service. Contact us if you have specific payment inquiries.",
   },
 ]
@@ -46,7 +42,7 @@ export function FAQSection() {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-sm font-medium text-primary tracking-wider uppercase mb-4 block">
+          <span className="text-lg font-medium text-primary tracking-wider uppercase mb-4 block">
             FAQ
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">

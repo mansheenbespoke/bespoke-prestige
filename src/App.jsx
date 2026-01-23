@@ -19,8 +19,8 @@ function App() {
       <RWCSection />
       <ComplianceSection />
       <VASSSection />
-      {/* <FAQSection />
-      <ContactSection />
+      <FAQSection />
+      {/* <ContactSection />
       <Footer /> */}
     </main>
   )
