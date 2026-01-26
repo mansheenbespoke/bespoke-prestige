@@ -12,7 +12,7 @@ const navLinks = [
   { href: "#contact", label: "Contact" },
 ]
 
-export function Header() {
+export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
