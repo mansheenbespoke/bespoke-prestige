@@ -18,8 +18,8 @@ function App() {
       <RacvSection />
       <RWCSection />
       <ComplianceSection />
-      <VASSSection />
-      <FAQSection />
+      {/* <VASSSection />
+      <FAQSection /> */}
       {/* <ContactSection /> */}
       <Footer />
     </main>
