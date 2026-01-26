@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin } from "lucide-react"
 
 const quickLinks = [
@@ -118,12 +119,12 @@ export function Footer() {
               © {currentYear} Bespoke Prestige. All Rights Reserved.
             </p>
             <div className="flex items-center gap-6">
-              <a 
-                href="#" 
+              <Link 
+                to="/privacy-policy" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Privacy Policy
-              </a>
+              </Link>
               <a 
                 href="#" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
