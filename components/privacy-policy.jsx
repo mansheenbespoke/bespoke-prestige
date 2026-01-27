@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 sm:p-8">
@@ -13,7 +17,7 @@ const PrivacyPolicy = () => {
           </p>
 
           <p>
-            Unless otherwise stated, this Policy describes and governs the information collection, use, and sharing practices of Bespoke Prestige Pty Ltd with respect to your use of our website (www.mdlreports.com.au) and the services ("Services") we provide and/or host on our servers.
+            Unless otherwise stated, this Policy describes and governs the information collection, use, and sharing practices of Bespoke Prestige Pty Ltd with respect to your use of our website (www.bespokeprestige.com) and the services ("Services") we provide and/or host on our servers.
           </p>
 
           <p>
