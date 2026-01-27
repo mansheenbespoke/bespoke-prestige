@@ -12,7 +12,7 @@ function App() {
           <main className="min-h-screen bg-background">
             <Navbar />
             <HomePage />
-            {/* <Footer /> */}
+            <Footer />
           </main>
         } />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

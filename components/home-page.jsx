@@ -15,9 +15,9 @@ export function HomePage() {
       <RacvSection />
       <RWCSection />
       <ComplianceSection />
-      {/* <VASSSection /> */}
-      {/* <ContactSection /> */}
-      {/* <FAQSection/> */}
+      <VASSSection />
+      <ContactSection />
+      <FAQSection/>
     </>
   )
 }

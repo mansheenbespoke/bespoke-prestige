@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     question: "Where are we located?",
-    answer: "We are located at 26 Havelock Road, Bayswater, VIC 3153.",
+    answer: "We are located at 28 Havelock Road, Bayswater, VIC 3153.",
   },
   {
     question: "What are our hours of operation?",

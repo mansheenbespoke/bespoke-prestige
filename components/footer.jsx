@@ -53,7 +53,7 @@ export function Footer() {
               </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary" />
-                26 Havelock Road, Bayswater, VIC 3153
+                28 Havelock Road, Bayswater, VIC 3153
               </div>
             </div>
           </div>
@@ -114,24 +114,17 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="py-6 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-2">
             <p className="text-sm text-muted-foreground">
               © {currentYear} Bespoke Prestige. All Rights Reserved.
             </p>
-            <div className="flex items-center gap-6">
-              <Link 
-                to="/privacy-policy" 
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <a 
-                href="#" 
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Terms of Use
-              </a>
-            </div>
+            <span className="hidden md:inline text-muted-foreground">•</span>
+            <Link 
+              to="/privacy-policy" 
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Privacy Policy
+            </Link>
           </div>
         </div>
       </div>

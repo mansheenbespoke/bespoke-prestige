@@ -9,11 +9,11 @@ const PrivacyPolicy = () => {
 
         <div className="space-y-4 text-gray-700 leading-relaxed text-sm">
           <p>
-            This Privacy Policy ("Policy") explains the information collection, use, and sharing practices of Grey Imports Australia Pty Ltd ("we," "us," and "our").
+            This Privacy Policy ("Policy") explains the information collection, use, and sharing practices of Bespoke Prestige Pty Ltd ("we," "us," and "our").
           </p>
 
           <p>
-            Unless otherwise stated, this Policy describes and governs the information collection, use, and sharing practices of Grey Imports Australia Pty Ltd with respect to your use of our website (www.mdlreports.com.au) and the services ("Services") we provide and/or host on our servers.
+            Unless otherwise stated, this Policy describes and governs the information collection, use, and sharing practices of Bespoke Prestige Pty Ltd with respect to your use of our website (www.mdlreports.com.au) and the services ("Services") we provide and/or host on our servers.
           </p>
 
           <p>
@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
 
           <h2 className="text-lg font-bold text-gray-900 mt-6 mb-3">Our Principles</h2>
           <p>
-            Grey Imports Australia Pty Ltd has designed this policy to be consistent with the following principles:
+            Bespoke Prestige Pty Ltd has designed this policy to be consistent with the following principles:
           </p>
           <ul className="list-disc list-inside space-y-2 ml-4">
             <li>Privacy policies should be human readable and easy to find.</li>
@@ -90,10 +90,10 @@ const PrivacyPolicy = () => {
             If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:
           </p>
           <div className="mt-4 p-4 bg-gray-100 rounded-md">
-            <p className="font-semibold text-gray-900">Grey Imports Australia Pty Ltd</p>
-            <p>26 Havelock Road</p>
+            <p className="font-semibold text-gray-900">Bespoke Prestige Pty Ltd</p>
+            <p>28 Havelock Road</p>
             <p>Bayswater, VIC 3153</p>
-            <p className="mt-2">Email: modelreports@mdlreports.com.au</p>
+            <p className="mt-2">Email: -</p>
             <p>Phone: 03 8555 2004</p>
           </div>
         </div>
