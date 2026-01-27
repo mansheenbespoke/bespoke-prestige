@@ -5,7 +5,8 @@ import {
   Settings, 
   Shield,
   Clock,
-  ArrowRight
+  ArrowRight,
+  ClipboardCheck
 } from "lucide-react"
 import { Card, CardContent } from "@/components/css/card"
 
@@ -37,16 +38,16 @@ const services = [
     href: "#contact",
   },
   {
-    icon: Wrench,
-    title: "Quality Repairs",
-    description: "Expert diagnostics and repairs for all vehicle makes and models. We fix problems right the first time with quality parts.",
-    href: "#contact",
+    icon: Shield,
+    title: "Compliance",
+    description: "Certified automotive compliance specialist delivering vehicle certification and approval services in line with Australian import regulations. Over 20 years of expertise.",
+    href: "#compliance",
   },
   {
-    icon: Shield,
-    title: "Trusted Mechanics",
-    description: "Our fully qualified mechanics are dedicated to providing efficient, reliable service. Real solutions for real problems.",
-    href: "#about",
+    icon: ClipboardCheck,
+    title: "VASS Certification",
+    description: "Vehicle Assessment Signatory Scheme certification for modified and imported vehicles. Working with accredited VASS engineers to ensure Victorian road safety and compliance requirements.",
+    href: "#vass",
   },
   
 ]
