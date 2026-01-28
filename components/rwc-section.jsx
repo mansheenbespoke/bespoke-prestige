@@ -125,7 +125,7 @@ export function RWCSection() {
                         If a vehicle fails the inspection, a list of items that did not meet VicRoads roadworthy standards will be presented. These items are required to be fixed within 7 days.
                       </p>
                       <p className="text-sm text-muted-foreground">
-                        A reinspection must also be conducted within 7 days. In such cases, a discounted re-inspection fee of <span className="font-semibold text-primary">$110</span> will be applied.
+                        A re-inspection must also be conducted within 7 days. In such cases, a discounted re-inspection fee of <span className="font-semibold text-primary">$110</span> will be applied.
                       </p>
                     </div>
                   </li>

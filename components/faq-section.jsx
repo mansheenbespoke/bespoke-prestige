@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "How long does a Roadworthy Certificate (RWC) take?",
-    answer: "A standard RWC inspection typically takes 2-3 hours depending on the vehicle. If any issues are found, we'll provide a list of required repairs. Reinspection must be conducted within 7 days.",
+    answer: "A standard RWC inspection typically takes 2-3 hours depending on the vehicle. If any issues are found, we'll provide a list of required repairs. Re-inspection must be conducted within 7 days.",
   },
   {
     question: "What's included in the RACV Pre-Purchase Inspection?",
