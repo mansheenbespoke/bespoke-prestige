@@ -18,19 +18,19 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "Contact Us",
-    href: "mailto:info@bespokeprestige.com",
+    value: "Email@bespokeprestige.com",
+    href: "mailto:manankaur2000@gmail.com",
   },
   {
     icon: MapPin,
     title: "Location",
-    value: "Melbourne, VIC",
+    value: "28 Havelock Rd, Bayswater, VIC 3153",
     href: "#",
   },
   {
     icon: Clock,
     title: "Hours",
-    value: "Mon - Fri",
+    value: "Mon–Fri: 8:30 AM – 5:00 PM",
     href: "#",
   },
 ]
@@ -89,7 +89,7 @@ export function ContactSection() {
             {/* Map Placeholder */}
             <div className="aspect-video bg-card border border-border rounded-lg overflow-hidden mt-8">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d403354.2763862!2d144.72015!3d-37.8136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sMelbourne%20VIC!5e0!3m2!1sen!2sau!4v1640000000000!5m2!1sen!2sau"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.2487906845676!2d145.26245037641824!3d-37.84387437195156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63e9f4e5f5555%3A0x5045675218ce6e0!2s28%20Havelock%20Rd%2C%20Bayswater%20VIC%203153!5e0!3m2!1sen!2sau!4v1640000000000!5m2!1sen!2sau"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -126,12 +126,29 @@ export function ContactSection() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="service" className="text-foreground">Choose Your Service *</Label>
+                      <select 
+                        id="service"
+                        required
+                        className="flex h-10 w-full rounded-md border border-border bg-input px-3 py-2 text-sm text-foreground ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      >
+                        <option value="">Select a service...</option>
+                        <option value="general">General Services</option>
+                        <option value="racv">RACV</option>
+                        <option value="rwc">RWC</option>
+                        <option value="compliance">Compliance</option>
+                        <option value="vass">VASS</option>
+                        <option value="others">Others</option>
+                      </select>
+                    </div>
+
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="name" className="text-foreground">Name *</Label>
                         <Input 
                           id="name"
-                          placeholder="Your name"
+                          placeholder="Enter Your name"
                           required
                           className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:border-primary"
                         />
@@ -141,7 +158,7 @@ export function ContactSection() {
                         <Input 
                           id="phone"
                           type="tel"
-                          placeholder="Your phone number"
+                          placeholder="Enter Your phone number"
                           required
                           className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:border-primary"
                         />
@@ -153,7 +170,7 @@ export function ContactSection() {
                       <Input 
                         id="email"
                         type="email"
-                        placeholder="your@email.com"
+                        placeholder="Enter Your email"
                         required
                         className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:border-primary"
                       />
@@ -191,10 +208,10 @@ export function ContactSection() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="rego" className="text-foreground">Registration *</Label>
+                        <Label htmlFor="rego" className="text-foreground">Registration</Label>
                         <Input 
                           id="rego"
-                          placeholder="e.g. ABC123"
+                          placeholder="e.g. ABC123 (optional)"
                           required
                           className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:border-primary"
                         />
@@ -203,7 +220,7 @@ export function ContactSection() {
 
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="date" className="text-foreground">Preferred Date *</Label>
+                        <Label htmlFor="date" className="text-foreground">Booking Date *</Label>
                         <Input 
                           id="date"
                           type="date"
@@ -212,7 +229,7 @@ export function ContactSection() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="time" className="text-foreground">Preferred Time *</Label>
+                        <Label htmlFor="time" className="text-foreground">Booking Time *</Label>
                         <Input 
                           id="time"
                           type="time"
