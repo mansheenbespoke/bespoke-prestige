@@ -6,6 +6,7 @@ const features = [
   "Expert Insight: Comprehensive checks by experienced professionals",
   "Complete Transparency: Detailed report highlighting potential issues or hidden costs",
   "Save Money: Avoid costly repairs or risky purchases with informed decisions",
+  "hhhh"
 ]
 
 export function RacvSection() {
