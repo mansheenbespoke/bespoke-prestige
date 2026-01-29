@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
           </p>
 
           <p>
-            Unless otherwise stated, this Policy describes and governs the information collection, use, and sharing practices of Bespoke Prestige Pty Ltd with respect to your use of our website (www.bespokeprestige.com) and the services ("Services") we provide and/or host on our servers.
+            Unless otherwise stated, this Policy describes and governs the information collection, use, and sharing practices of Bespoke Prestige Pty Ltd with respect to your use of our website (<a href="https://www.bespokeprestige.com" className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">www.bespokeprestige.com</a>) and the services ("Services") we provide and/or host on our servers.
           </p>
 
           <p>
@@ -102,10 +102,16 @@ const PrivacyPolicy = () => {
           </p>
           <div className="mt-4 p-4 bg-gray-100 rounded-md">
             <p className="font-semibold text-gray-900">Bespoke Prestige Pty Ltd</p>
-            <p>28 Havelock Road</p>
-            <p>Bayswater, VIC 3153</p>
-            <p className="mt-2"><strong> Email:</strong> {getEmail()}</p>
-            <p><strong>Phone:</strong> 03 9894 7844</p>
+            <p><strong>Address:</strong> <a 
+              href="https://www.google.com/maps/place/28+Havelock+Rd,+Bayswater+VIC+3153/@-37.84387437195156,145.26245037641824,15z" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 underline"
+            >
+              28 Havelock Road, Bayswater, VIC 3153
+            </a></p>
+            <p><strong> Email:</strong> <a href={`mailto:${getEmail()}`} className="text-blue-600 hover:text-blue-800 underline">{getEmail()}</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+61398947844" className="text-blue-600 hover:text-blue-800 underline">03 9894 7844</a></p>
           </div>
         </div>
       </div>
