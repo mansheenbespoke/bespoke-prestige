@@ -97,8 +97,8 @@ const PrivacyPolicy = () => {
             <p className="font-semibold text-gray-900">Bespoke Prestige Pty Ltd</p>
             <p>28 Havelock Road</p>
             <p>Bayswater, VIC 3153</p>
-            <p className="mt-2">Email: -</p>
-            <p>Phone: 03 8555 2004</p>
+            <p className="mt-2"><strong> Email:</strong> enquiries@bespokeprestige.com</p>
+            <p><strong>Phone:</strong> 03 9894 7844</p>
           </div>
         </div>
       </div>

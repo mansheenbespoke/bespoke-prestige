@@ -45,11 +45,11 @@ export function Footer() {
                 03 9894 7844
               </a>
               <a 
-                href="mailto:email@bespokeprestige.com"
+                href="mailto:enquiries@bespokeprestige.com"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail className="w-4 h-4 text-primary" />
-                email@bespokeprestige.com
+                enquiries@bespokeprestige.com
               </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary" />

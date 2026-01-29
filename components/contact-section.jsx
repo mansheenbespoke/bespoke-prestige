@@ -18,8 +18,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "Email@bespokeprestige.com",
-    href: "mailto:manankaur2000@gmail.com",
+    value: "enquiries@bespokeprestige.com",
+    href: "mailto:enquiries@bespokeprestige.com",
   },
   {
     icon: MapPin,
