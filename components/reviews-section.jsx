@@ -87,9 +87,15 @@ const ReviewsSection = () => {
               className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl flex flex-col items-center transition-transform duration-300
                 ${idx === 1 ? 'scale-105 z-10 p-7 md:p-9 border-2 border-blue-200 dark:border-blue-900' : 'scale-95 opacity-90 p-5 md:p-6'}
                 hover:scale-100`}
-              style={idx === 1
-                  ? { minWidth: '340px', maxWidth: '480px', minHeight: '220px' }
-                : { minWidth: '260px', maxWidth: '340px', minHeight: '160px' }}
+              style={{
+                width: idx === 1 ? '400px' : '320px',
+                minHeight: idx === 1 ? '260px' : '200px',
+                maxHeight: idx === 1 ? '340px' : '260px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                overflow: 'hidden',
+              }}
             >
                 <h3 className={`font-semibold ${idx === 1 ? 'text-xl' : 'text-lg'} text-gray-800 dark:text-white mb-3 text-center`}>{review.name}</h3>
                 <p className={`text-gray-500 dark:text-gray-300 text-center ${idx === 1 ? 'text-base' : 'text-sm'} mb-3`}>"{review.review}"</p>
