@@ -6,6 +6,7 @@ import { RWCSection } from "@/components/rwc-section"
 import { VASSSection } from "@/components/vass-section"
 import { FAQSection } from "@/components/faq-section"
 import { ContactSection } from "@/components/contact-section"
+import ReviewsSection from "@/components/reviews-section"
 
 export function HomePage() {
   return (
@@ -17,6 +18,7 @@ export function HomePage() {
       <ComplianceSection />
       <VASSSection />
       <ContactSection />
+      <ReviewsSection />
       <FAQSection/>
     </>
   )
