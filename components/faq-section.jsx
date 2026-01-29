@@ -26,6 +26,10 @@ const faqs = [
     question: "What's included in the RACV Pre-Purchase Inspection?",
     answer: "Our $385 RACV Pre-Purchase Inspection includes comprehensive checks by experienced professionals, a detailed report highlighting potential issues or hidden costs, and expert insight to help you make an informed decision before purchasing a vehicle.",
   },
+   {
+    question: "How long does a Pre-Purchase Inspection take?",
+    answer: "We recommend dropping your vehicle off at our facility between 9:00–10:00 AM on working days. The process typically takes 3–4 hours, though the duration may vary depending on the vehicle and requirements.",
+  },
   {
     question: "Do we work on all car brands?",
     answer: "Yes, our fully qualified mechanics have over 20 years of combined experience working on all makes and models. Whether you drive a luxury vehicle or an everyday sedan, we can service it.",

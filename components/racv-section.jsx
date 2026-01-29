@@ -6,7 +6,7 @@ const features = [
   "Expert Insight: Comprehensive checks by experienced professionals",
   "Complete Transparency: Detailed report highlighting potential issues or hidden costs",
   "Save Money: Avoid costly repairs or risky purchases with informed decisions",
-  "hhhh"
+  "Exclusive Benefit: RACV members receive a 5% discount on all inspection services",
 ]
 
 export function RacvSection() {
