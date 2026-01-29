@@ -85,14 +85,14 @@ const ReviewsSection = () => {
             <div
               key={idx}
               className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl flex flex-col items-center transition-transform duration-300
-                ${idx === 1 ? 'scale-110 z-10 p-12 md:p-16 border-4 border-blue-200 dark:border-blue-900' : 'scale-95 opacity-80 p-8 md:p-10'}
-                hover:scale-105`}
+                ${idx === 1 ? 'scale-105 z-10 p-7 md:p-9 border-2 border-blue-200 dark:border-blue-900' : 'scale-95 opacity-90 p-5 md:p-6'}
+                hover:scale-100`}
               style={idx === 1
-                ? { minWidth: '360px', maxWidth: '420px', minHeight: '380px' }
-                : { minWidth: '280px', maxWidth: '340px', minHeight: '300px' }}
+                  ? { minWidth: '340px', maxWidth: '480px', minHeight: '220px' }
+                : { minWidth: '260px', maxWidth: '340px', minHeight: '160px' }}
             >
-              <h3 className={`font-semibold ${idx === 1 ? 'text-3xl' : 'text-xl'} text-gray-800 dark:text-white mb-4 text-center`}>{review.name}</h3>
-              <p className={`text-gray-500 dark:text-gray-300 text-center ${idx === 1 ? 'text-lg' : 'text-base'} mb-4`}>"{review.review}"</p>
+                <h3 className={`font-semibold ${idx === 1 ? 'text-xl' : 'text-lg'} text-gray-800 dark:text-white mb-3 text-center`}>{review.name}</h3>
+                <p className={`text-gray-500 dark:text-gray-300 text-center ${idx === 1 ? 'text-base' : 'text-sm'} mb-3`}>"{review.review}"</p>
               {getStars(review.rating)}
             </div>
           ))}
