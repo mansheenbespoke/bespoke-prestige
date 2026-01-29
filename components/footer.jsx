@@ -21,6 +21,13 @@ const services = [
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
+  
+  // Obfuscated email to prevent spam bots
+  const getEmail = () => {
+    const user = 'enquiries';
+    const domain = 'bespokeprestige.com';
+    return `${user}@${domain}`;
+  };
 
   return (
     <footer className="bg-black border-t border-border">
@@ -45,11 +52,11 @@ export function Footer() {
                 03 9894 7844
               </a>
               <a 
-                href="mailto:enquiries@bespokeprestige.com"
+                href={`mailto:${getEmail()}`}
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail className="w-4 h-4 text-primary" />
-                enquiries@bespokeprestige.com
+                {getEmail()}
               </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary" />

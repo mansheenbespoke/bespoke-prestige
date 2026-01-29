@@ -8,6 +8,13 @@ import { Textarea } from "@/components/css/textarea"
 import { Label } from "@/components/css/label"
 import { Card, CardContent } from "@/components/css/card"
 
+// Obfuscated email to prevent spam bots
+const getEmail = () => {
+  const user = 'enquiries';
+  const domain = 'bespokeprestige.com';
+  return `${user}@${domain}`;
+};
+
 const contactInfo = [
   {
     icon: Phone,
@@ -18,8 +25,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "enquiries@bespokeprestige.com",
-    href: "mailto:enquiries@bespokeprestige.com",
+    value: "Contact Us",
+    href: `mailto:${getEmail()}`,
   },
   {
     icon: MapPin,
@@ -109,8 +116,8 @@ export function ContactSection() {
                 
                 {isSubmitted ? (
                   <div className="text-center py-12">
-                    <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle2 className="w-8 h-8 text-green-500" />
+                    <div className="w-16 h-16 bg-[#23CED9]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle2 className="w-8 h-8 text-[#23CED9]" />
                     </div>
                     <h4 className="text-xl font-semibold text-foreground mb-2">Booking Request Sent!</h4>
                     <p className="text-muted-foreground mb-6">
@@ -220,7 +227,7 @@ export function ContactSection() {
 
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="date" className="text-foreground">Booking Date *</Label>
+                        <Label htmlFor="date" className="text-foreground">Preferred Drop-off Date *</Label>
                         <Input 
                           id="date"
                           type="date"
@@ -229,7 +236,7 @@ export function ContactSection() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="time" className="text-foreground">Booking Time *</Label>
+                        <Label htmlFor="time" className="text-foreground">Preferred Drop-off Time *</Label>
                         <Input 
                           id="time"
                           type="time"

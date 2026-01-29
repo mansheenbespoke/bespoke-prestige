@@ -109,7 +109,7 @@ export function RWCSection() {
                     </p>
                     <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-[#23CED9] flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold text-foreground mb-1">The vehicle passes</p>
                       <p className="text-sm text-muted-foreground">

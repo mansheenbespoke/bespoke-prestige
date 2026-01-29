@@ -137,8 +137,8 @@ export function HeroSection() {
         <div className="flex animate-marquee whitespace-nowrap">
           {[...marqueeServices, ...marqueeServices].map((service, index) => (
             <div key={index} className="flex items-center mx-8">
-              <CheckCircle2 className="w-4 h-4 text-primary-foreground mr-2" />
-              <span className="text-sm font-medium text-primary-foreground">{service}</span>
+              <CheckCircle2 className="w-5 h-5 text-primary-foreground mr-2 drop-shadow-sm" />
+              <span className="text-sm font-bold text-primary-foreground drop-shadow-sm">{service}</span>
             </div>
           ))}
         </div>

@@ -5,6 +5,13 @@ const PrivacyPolicy = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Obfuscated email to prevent spam bots
+  const getEmail = () => {
+    const user = 'enquiries';
+    const domain = 'bespokeprestige.com';
+    return `${user}@${domain}`;
+  };
+
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 sm:p-8">
@@ -97,7 +104,7 @@ const PrivacyPolicy = () => {
             <p className="font-semibold text-gray-900">Bespoke Prestige Pty Ltd</p>
             <p>28 Havelock Road</p>
             <p>Bayswater, VIC 3153</p>
-            <p className="mt-2"><strong> Email:</strong> enquiries@bespokeprestige.com</p>
+            <p className="mt-2"><strong> Email:</strong> {getEmail()}</p>
             <p><strong>Phone:</strong> 03 9894 7844</p>
           </div>
         </div>
