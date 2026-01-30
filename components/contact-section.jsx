@@ -43,6 +43,15 @@ const contactInfo = [
 ]
 
 export function ContactSection() {
+      // Helper to get min date string (3 days from today)
+      const getMinDate = () => {
+        const today = new Date();
+        today.setDate(today.getDate() + 3);
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        return `${yyyy}-${mm}-${dd}`;
+      };
     // Generate time options from 8:30 to 15:00 in 5-min increments
     const generateTimeOptions = () => {
       const options = [];
@@ -96,8 +105,17 @@ export function ContactSection() {
   };
 
   const handleDateChange = (e) => {
-    setDate(e.target.value);
-    const err = validateTime(time, e.target.value);
+    const selected = e.target.value;
+    const d = new Date(selected);
+    const day = d.getDay();
+    // 0 = Sunday, 6 = Saturday
+    if (day === 0 || day === 6) {
+      setDate("");
+      setTimeError("No bookings available on weekends.");
+      return;
+    }
+    setDate(selected);
+    const err = validateTime(time, selected);
     setTimeError(err);
   };
 
@@ -300,23 +318,36 @@ export function ContactSection() {
                           className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:border-primary"
                           value={date}
                           onChange={handleDateChange}
+                          min={getMinDate()}
                         />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="time" className="text-foreground">Preferred Drop-off Time *</Label>
-                        <select
-                          id="time"
-                          required
-                          className="flex h-10 w-full rounded-md border border-border bg-input px-3 py-2 text-sm text-foreground ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                          value={time}
-                          onChange={handleTimeChange}
-                          disabled={!isWeekday(date)}
-                        >
-                          <option value="">Select a time...</option>
-                          {generateTimeOptions().map((t) => (
-                            <option key={t.value} value={t.value}>{t.label}</option>
-                          ))}
-                        </select>
+                        <div className="relative group">
+                          <select
+                            id="time"
+                            required
+                            className="flex h-10 w-full rounded-md border border-border bg-input px-3 py-2 text-sm text-foreground ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            value={time}
+                            onChange={handleTimeChange}
+                            disabled={!isWeekday(date)}
+                            aria-describedby={!isWeekday(date) ? 'time-tooltip' : undefined}
+                          >
+                            <option value="">Select a time...</option>
+                            {generateTimeOptions().map((t) => (
+                              <option key={t.value} value={t.value}>{t.label}</option>
+                            ))}
+                          </select>
+                          {!isWeekday(date) && (
+                            <div
+                              id="time-tooltip"
+                              className="absolute left-0 top-full mt-2 w-max bg-black text-white text-xs rounded px-2 py-1 shadow-lg z-10 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200"
+                              style={{whiteSpace: 'nowrap'}}
+                            >
+                              Select a drop-off date to choose a time
+                            </div>
+                          )}
+                        </div>
                         {timeError && (
                           <p className="text-red-500 text-xs mt-1">{timeError}</p>
                         )}
