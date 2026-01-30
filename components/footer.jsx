@@ -9,6 +9,7 @@ const quickLinks = [
   { href: "#vass", label: "VASS" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
+  { href: "#reviews", label: "Reviews" },
 ]
 
 const services = [

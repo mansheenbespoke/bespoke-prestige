@@ -65,7 +65,7 @@ const ReviewsSection = () => {
   }
 
   return (
-    <section className="relative w-full py-16 px-4 md:px-8 mt-10 bg-background overflow-hidden">
+    <section id="reviews" className="relative w-full py-16 px-4 md:px-8 mt-10 bg-background overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
         <div
@@ -76,7 +76,9 @@ const ReviewsSection = () => {
         />
       </div>
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <h2 className="text-4xl font-bold text-center text-white mb-2">Our Client Testimonial</h2>
+        <h2 className="text-4xl font-bold text-center text-white mb-2">
+          Our Client <span className="text-cyan-500" style={{ color: 'hsl(185, 72%, 49%)' }}>Testimonial</span>
+        </h2>
         <p className="text-center text-gray-500 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
           Read what our customers are saying about us through their genuine Google reviews, based on real experiences with our services.
         </p>
@@ -85,8 +87,7 @@ const ReviewsSection = () => {
             <div
               key={idx}
               className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl flex flex-col items-center transition-transform duration-300
-                ${idx === 1 ? 'scale-105 z-10 p-7 md:p-9 border-2 border-blue-200 dark:border-blue-900' : 'scale-95 opacity-90 p-5 md:p-6'}
-                hover:scale-100`}
+                ${idx === 1 ? 'scale-105 z-10 p-7 md:p-9 border-2 border-blue-200 dark:border-blue-900' : 'scale-95 opacity-90 p-5 md:p-6'}`}
               style={{
                 width: idx === 1 ? '400px' : '320px',
                 minHeight: idx === 1 ? '260px' : '200px',
@@ -118,10 +119,10 @@ const ReviewsSection = () => {
         </p>
         <div className="text-center mt-8">
           <a
-            href="https://www.google.com/search?q=bespoke+prestige+reviews"
+            href="https://www.google.com/search?sca_esv=ae1e161c6b0f2947&sxsrf=ANbL-n66UUFBQlRSny2q7cmNi5MFyEiv5Q:1769721932555&si=AL3DRZHrmvnFAVQPOO2Bzhf8AX9KZZ6raUI_dT7DG_z0kV2_x959I3Tfh3lfmZC70MNgpVSME5xxC-PyoMr0ZBNu8vhMT0tsEh69DYqLD5MGbDlgF6G9Do-WJQ93XPjqrqX5RXp6s8Yn&q=Bespoke+Motors+Reviews&sa=X&ved=2ahUKEwjfrpD517GSAxVnSGwGHTBKMikQ0bkNegQIJBAH&biw=1536&bih=695&dpr=1.25&aic=0"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-blue-500 text-white font-semibold py-2 px-6 rounded-full shadow hover:bg-blue-600 transition"
+            className="inline-block bg-blue-500 text-white font-semibold py-2 px-6 rounded-full shadow transition"
           >
             See More on Google
           </a>

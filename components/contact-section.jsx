@@ -43,17 +43,82 @@ const contactInfo = [
 ]
 
 export function ContactSection() {
+    // Generate time options from 8:30 to 15:00 in 5-min increments
+    const generateTimeOptions = () => {
+      const options = [];
+      let hour = 8, minute = 30;
+      while (hour < 15 || (hour === 15 && minute === 0)) {
+        const value = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+        // Format label as 8:30 AM, 9:05 AM, etc.
+        let displayHour = hour > 12 ? hour - 12 : hour;
+        let ampm = hour >= 12 ? 'PM' : 'AM';
+        if (displayHour === 0) displayHour = 12;
+        const label = `${displayHour}:${minute.toString().padStart(2, '0')} ${ampm}`;
+        options.push({ value, label });
+        minute += 5;
+        if (minute >= 60) {
+          minute = 0;
+          hour++;
+        }
+      }
+      return options;
+    };
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [time, setTime] = useState("");
+  const [date, setDate] = useState("");
+  const [timeError, setTimeError] = useState("");
+
+  // Helper to check if a date is Mon-Fri
+  const isWeekday = (dateStr) => {
+    if (!dateStr) return false;
+    const d = new Date(dateStr);
+    const day = d.getDay();
+    return day >= 1 && day <= 5; // 1=Mon, 5=Fri
+  };
+
+  // Validate time and date
+  const validateTime = (timeVal, dateVal) => {
+    if (!timeVal || !dateVal) return "";
+    if (!isWeekday(dateVal)) {
+      return "Bookings are only available Monday to Friday.";
+    }
+    if (timeVal < "08:30" || timeVal > "15:00") {
+      return "Time must be between 8:30 AM and 3:00 PM.";
+    }
+    return "";
+  };
+
+  const handleTimeChange = (e) => {
+    setTime(e.target.value);
+    const err = validateTime(e.target.value, date);
+    setTimeError(err);
+  };
+
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+    const err = validateTime(time, e.target.value);
+    setTimeError(err);
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsLoading(true)
+    e.preventDefault();
+    const err = validateTime(time, date);
+    setTimeError(err);
+    if (err) return;
+    setIsLoading(true);
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    setIsLoading(false)
-    setIsSubmitted(true)
-  }
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    setIsLoading(false);
+    setIsSubmitted(true);
+  };
+
+  const handleScrollToReviews = () => {
+    const el = document.getElementById('reviews');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section id="contact" className="py-24 bg-secondary/30">
@@ -233,16 +298,28 @@ export function ContactSection() {
                           type="date"
                           required
                           className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:border-primary"
+                          value={date}
+                          onChange={handleDateChange}
                         />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="time" className="text-foreground">Preferred Drop-off Time *</Label>
-                        <Input 
+                        <select
                           id="time"
-                          type="time"
                           required
-                          className="bg-input border-border text-foreground placeholder:text-muted-foreground focus:border-primary"
-                        />
+                          className="flex h-10 w-full rounded-md border border-border bg-input px-3 py-2 text-sm text-foreground ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                          value={time}
+                          onChange={handleTimeChange}
+                          disabled={!isWeekday(date)}
+                        >
+                          <option value="">Select a time...</option>
+                          {generateTimeOptions().map((t) => (
+                            <option key={t.value} value={t.value}>{t.label}</option>
+                          ))}
+                        </select>
+                        {timeError && (
+                          <p className="text-red-500 text-xs mt-1">{timeError}</p>
+                        )}
                       </div>
                     </div>
 

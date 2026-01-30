@@ -17,9 +17,9 @@ export function HomePage() {
       <RWCSection />
       <ComplianceSection />
       <VASSSection />
-      <ContactSection />
       <ReviewsSection />
       <FAQSection/>
+      <ContactSection />
     </>
   )
 }
